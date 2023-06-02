@@ -33,14 +33,13 @@ function Timer() {
 					// pathColor: `rgba(62, 152, 199, ${percentage / 100})`,
 					textColor: '#fff',
 					trailColor: '#d6d6d6',
-					backgroundColor: '#3e98c7',
+					pathColor: `red`,
+					backgroundColor: '#3ered98c7',
 				})}
 			/>
 			<div style={{ marginTop: '20px' }}>
 				{' '}
 				<PlayButton />
-			</div>
-			<div style={{ marginTop: '20px' }}>
 				<PauseButton />
 			</div>
 			<div style={{ marginTop: '20px' }}>

@@ -1,12 +1,13 @@
 import './App.css';
+import Settings from './Components/Settings';
 import Timer from './Components/Timer';
-// testing commit
+import { useState } from 'react';
+
 function App() {
-	return (
-		<main>
-			<Timer />
-		</main>
-	);
+	const [showSettings, setSettings] = useState(true);
+	// const [showSettings, setSettings] = useState(false);
+
+	return <main>{showSettings ? <Settings /> : <Timer />}</main>;
 }
 
 export default App;
