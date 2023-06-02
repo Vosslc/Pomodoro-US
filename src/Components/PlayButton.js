@@ -1,3 +1,9 @@
+// Date: 09/18/2021
+// Note: React Functional Component - Play Button
+//q: why is this a functional component?
+//a: Functional components are basic JavaScript functions. These are typically arrow functions but can also be created with the regular function keyword. ... React also has another type of components called Pure Components which are the same as Functional Components but Class Components have some additional features.
+//q: what is the purpose of this component?
+
 function PlayButton(props) {
 	return (
 		<button {...props}>
