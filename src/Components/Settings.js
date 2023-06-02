@@ -1,11 +1,40 @@
 //functioanl component
 // Path: pomodoro-timer/src/Components/Settings.js
-import React from 'react';
+import ReactSlider from 'react-slider';
+import React, { useContext } from 'react';
+import SettingContext from './SettingContext';
+import '../slider.css';
+import BackButton from './BackButton';
+
 function Settings() {
+	const settingsInfo = useContext(SettingContext);
 	return (
 		<div style={{ textAlign: 'left' }}>
-			<label>work minutes:</label>
-			<label>break minutes:</label>
+			<label>work: {settingsInfo.workMinutes}:00</label>
+			<ReactSlider
+				className='horizontal-slider'
+				thumbClassName='thumb'
+				trackClassName='track'
+				value={settingsInfo.workMinutes}
+				onChange={(newValue) => {
+					settingsInfo.setWorkMinutes(newValue);
+				}}
+				min={1}
+				max={120}
+			/>
+			<label>break: {settingsInfo.breakMinutes}:00</label>
+			<ReactSlider
+				className='horizontal-slider-green'
+				thumbClassName='thumb'
+				trackClassName='track'
+				value={settingsInfo.breakMinutes}
+				onChange={(newValue) => {
+					settingsInfo.setBreakMinutes(newValue);
+				}}
+				min={1}
+				max={120}
+			/>
+			<BackButton />
 		</div>
 	);
 }

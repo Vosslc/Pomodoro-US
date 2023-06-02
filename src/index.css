@@ -1,3 +1,8 @@
+:root{
+  --red: #f54e4e;
+  --green: #4aec8c;
+}
+
 body {
   background-color: #30384b;
   color: #eee;
@@ -48,4 +53,6 @@ label{
   display: block;
   font-size: 2rem;
   margin-bottom: 10px;
+  margin-top: 20px;
+  text-transform: capitalize;
 }

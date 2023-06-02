@@ -1,0 +1,22 @@
+.horizontal-slider{
+  height: 40px;
+  border: 2px solid var(--red);
+  border-radius: 10px;
+}
+
+.thumb{
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: var(--red);
+  cursor: pointer;
+}
+
+.horizontal-slider-green{
+  height: 40px;
+  border: 2px solid var(--green);
+  border-radius: 10px;
+}
+.horizontal-slider-green .thumb{
+  background-color: var(--green);
+}

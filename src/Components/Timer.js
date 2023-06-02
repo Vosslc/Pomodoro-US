@@ -3,11 +3,14 @@ import 'react-circular-progressbar/dist/styles.css';
 import PlayButton from '../Components/PlayButton';
 import PauseButton from '../Components/PauseButton';
 import SettingsButton from '../Components/SettingsButton';
+import { useContext } from 'react';
+import SettingContext from './SettingContext';
 
 const red = '#ef54e4e';
 const green = '#4aec8c';
 
 function Timer() {
+	const settingsInfo = useContext(SettingContext);
 	return (
 		<div>
 			<CircularProgressbar
@@ -33,7 +36,7 @@ function Timer() {
 					// pathColor: `rgba(62, 152, 199, ${percentage / 100})`,
 					textColor: '#fff',
 					trailColor: '#d6d6d6',
-					pathColor: `red`,
+					pathColor: red,
 					backgroundColor: '#3ered98c7',
 				})}
 			/>
@@ -43,7 +46,7 @@ function Timer() {
 				<PauseButton />
 			</div>
 			<div style={{ marginTop: '20px' }}>
-				<SettingsButton />
+				<SettingsButton onClick={() => settingsInfo.setShowSettings(true)} />
 			</div>
 		</div>
 	);
